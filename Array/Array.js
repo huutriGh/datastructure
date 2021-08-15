@@ -6,6 +6,10 @@
 // Static array: specigfy the number of elemnts your arrry will hold
 //Dynamic array: copy and rebuild an array at a new location, which more memory, if we wanted more memory
 
+
+//Pros: Fast lookup, Fast push/pop, ordered.
+//Cons: slow insert, slow deletes, fixed size if static array
+
 class MyArray {
   constructor() {
     this.length = 0;
