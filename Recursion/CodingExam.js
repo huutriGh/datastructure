@@ -33,8 +33,11 @@ function fibonacciIterative(n) {
   return arr;
 }
 
+let calculaton = 0;
+let calculaton1 = 0;
 //0 , 1 , 1,  2, 3 , 5, 8, 13, 21, 34, 55, 89, 144 ...
 function fibonacciRecursive(n) {
+  calculaton1++;
   if (n < 2) {
     return [0, 1];
   }
@@ -45,6 +48,37 @@ function fibonacciRecursive(n) {
   return s;
 }
 
+function fibonacciMaster() {
+  let cache = {};
+  let list = [];
+  console.log(list);
+  return function fib(n) {
+    calculaton++;
+    if (n in cache) {
+      console.log(list);
+      return cache[n];
+    } else {
+      if (n < 2) {
+        if (n === 0) {
+          list.push(n);
+        }
+        console.log(list);
+        return n;
+      }
+
+      cache[n] = fib(n - 1) + fib(n - 2);
+      list.push(cache[n]);
+      console.log(list);
+      return cache[n];
+    }
+  };
+}
+
 //console.log(fibonacciIterative(5));
 // console.log(findFactorialIterative(3));
-console.log(fibonacciRecursive(5));
+
+const memorize = fibonacciMaster();
+console.log(memorize(35));
+console.log(fibonacciRecursive(35));
+console.log('cal: ', calculaton);
+console.log('cal1: ', calculaton1);
