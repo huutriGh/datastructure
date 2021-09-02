@@ -15,17 +15,6 @@ var twoSum = function (nums, target) {
  * function ListNode(val, next) {
  *     this.val = (val===undefined ? 0 : val)
  *     this.next = (next===undefined ? null : next)
- * }
- *  {
- *  val:2,
- *  next: {
- *        val: 4,
- *        next : {
- *              vale: 3,
- *              next: null
- * }
- * }
- * }
  */
 /**
  * @param {ListNode} l1
@@ -130,4 +119,3 @@ var findMedianSortedArrays = function (nums1, nums2) {
   }
 };
 
-console.log(findMedianSortedArrays([0, 0, 0, 0, 0], [-1, 0, 0, 0, 0, 0, 1]));
