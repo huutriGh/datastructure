@@ -132,7 +132,9 @@ class BinarySearchTree {
 
     return false;
   }
-
+ //          4
+//     3          5
+//  1     2   0      10
   breadthFirstSearch() {
     let currentNode = this.root;
     let list = [];
