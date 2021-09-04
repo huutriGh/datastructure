@@ -83,32 +83,11 @@ function fibonacciMaster() {
 // console.log('cal: ', calculaton);
 // console.log('cal1: ', calculaton1);
 
-const drawLine = (tickLength, tickLable) => {
-  for (let i = 0; i < tickLength; i++) {
-    console.log("-");
-  }
-  if (tickLable >= 0) {
-    console.log(" " + tickLable);
-  }
-};
-
-const drawLine1 = (tickLength) => {
-  drawLine(tickLength, -1);
-};
-
-const drawInterval = (centraLength) => {
-  if (centraLength >= 1) {
-    drawInterval(centraLength - 1);
-    drawLine(centraLength);
-    drawInterval(centraLength - 1);
-  }
-};
-
-function drawRuler(nInches, majorLength) {
-  drawLine(majorLength, 0); // draw inch 0 line and label
-  for (let j = 1; j <= nInches; j++) {
-    drawInterval(majorLength - 1); // draw interior ticks for inch
-    drawLine(majorLength, j); // draw inch j line and label
+function linearSum(data = [], n) {
+  if (n === 0) {
+    return 0;
+  } else {
+    return linearSum(data, n - 1) + data[n - 1];
   }
 }
-drawRuler(1, 5);
+console.log(linearSum([4, 3, 6, 2, 8, 9], 6));
