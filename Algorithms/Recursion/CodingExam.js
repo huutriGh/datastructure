@@ -38,8 +38,8 @@ let calculaton1 = 0;
 //0 , 1 , 1,  2, 3 , 5, 8, 13, 21, 34, 55, 89, 144 ...
 function fibonacciRecursive(n) {
   calculaton1++;
-  if (n < 2) {
-    return [0, 1];
+  if (n <= 1) {
+    return [n, 1];
   }
 
   let s = fibonacciRecursive(n - 1);
@@ -74,7 +74,8 @@ function fibonacciMaster() {
   };
 }
 
-//console.log(fibonacciIterative(5));
+
+console.log(fibonacciRecursive(5));
 // console.log(findFactorialIterative(3));
 
 // const memorize = fibonacciMaster();
@@ -90,4 +91,45 @@ function linearSum(data = [], n) {
     return linearSum(data, n - 1) + data[n - 1];
   }
 }
-console.log(linearSum([4, 3, 6, 2, 8, 9], 6));
+
+function binarySum(data = [], low, high) {
+  if (low > high) {
+    return 0;
+  } else if (low === high) {
+    return data[low];
+  } else {
+    let mid = Math.floor((low + high) / 2);
+
+    return binarySum(data, low, mid) + binarySum(data, mid + 1, high);
+  }
+}
+
+// function power(x, n) {
+//   if (n === 0) {
+//     return 1;
+//   }
+//   return x * power(x, n - 1);
+// }
+
+// console.log(power(2, 3)); === 8
+
+// 2* power(2,2) = 2 * 4 = 8
+
+//    2* power(2,1) = 2 * 2 = 4
+
+//       2* power(2,0) = 2* 1 = 2;
+
+function power(x, n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    let partial = power(x, Math.floor(n / 2));
+    let result = partial * partial;
+    if (n % 2 === 1) {
+      result *= x;
+    }
+    return result;
+  }
+}
+//console.log(power(2, 3));
+console.log(binarySum([2, 3, 4], 0, 2));
