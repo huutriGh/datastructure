@@ -37,9 +37,12 @@ public class DatastructureApplication implements CommandLineRunner {
 			}
 
 		};
-		Queue<Integer> q = new LinkedList<Integer>(Arrays.asList(1, 4, 78, 5, 10, 7, 8, 9, 34));
-		//q = q.stream().sorted(Comp).collect(Collectors.toCollection(LinkedList::new));
-		QuickSort.quickSort(q, Comp);
+		// Queue<Integer> q = new LinkedList<Integer>(Arrays.asList(1, 4, 78, 5, 10, 7,
+		// 8, 9, 34));
+		// q =
+		// q.stream().sorted(Comp).collect(Collectors.toCollection(LinkedList::new));
+		Integer[] array = new Integer[] { 1, 4, 78, 5, 10, 7, 8, 9, 34 };
+		QuickSort.quickSortInPlace(array, Comp, 0, array.length - 1);
 	}
 
 }
