@@ -10,6 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import algorithms.datastructure.sorting.BucketSort;
 import algorithms.datastructure.sorting.InsertSort;
 import algorithms.datastructure.sorting.MergeSort;
 import algorithms.datastructure.sorting.QuickSort;
@@ -44,10 +45,11 @@ public class DatastructureApplication implements CommandLineRunner {
 		// 8, 9, 34));
 		// QuickSort.quickSort(q, Comp);
 		// q.stream().sorted(Comp).collect(Collectors.toCollection(LinkedList::new));
-		Integer[] array = new Integer[] { 1, 4, 78, 5, 10, 7, 8, 9, 34 };
+		Integer[] array = new Integer[] { 1, 4, 78, 5, 10, 7, 8, 9, 100000 };
 		// InsertSort.sort(array, Comp);
 		// MergeSort.sort(array, Comp);
-		SelectionSort.sort(array, Comp);
+		// 
+		BucketSort.sort(array);
 	}
 
 }
