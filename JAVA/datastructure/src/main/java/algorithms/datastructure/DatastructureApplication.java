@@ -1,20 +1,12 @@
 package algorithms.datastructure;
 
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.stream.Collectors;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import algorithms.datastructure.sorting.BucketSort;
-import algorithms.datastructure.sorting.InsertSort;
-import algorithms.datastructure.sorting.MergeSort;
-import algorithms.datastructure.sorting.QuickSort;
-import algorithms.datastructure.sorting.SelectionSort;
 
 @SpringBootApplication
 public class DatastructureApplication implements CommandLineRunner {
@@ -48,7 +40,7 @@ public class DatastructureApplication implements CommandLineRunner {
 		Integer[] array = new Integer[] { 1, 4, 78, 5, 10, 7, 8, 9, 100000 };
 		// InsertSort.sort(array, Comp);
 		// MergeSort.sort(array, Comp);
-		// 
+		//
 		BucketSort.sort(array);
 	}
 
