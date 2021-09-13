@@ -10,6 +10,7 @@ public class BucketSort {
 
         int n = arr.length;
         // Create bucket array
+        @SuppressWarnings("unchecked")
         List<Integer>[] buckets = new List[n];
         // Associate a list with each index
         // in the bucket array

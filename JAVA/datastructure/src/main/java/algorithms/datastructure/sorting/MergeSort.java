@@ -45,6 +45,7 @@ public class MergeSort {
 
         int n = orig.length;
         K[] src = orig;
+        @SuppressWarnings("unchecked")
         K[] dest = (K[]) new Object[n];
         K[] temp;
         for (int i = 1; i < n; i *= 2) {
