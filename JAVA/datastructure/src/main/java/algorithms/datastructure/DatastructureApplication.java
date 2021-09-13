@@ -39,9 +39,9 @@ public class DatastructureApplication implements CommandLineRunner {
 		// q.stream().sorted(Comp).collect(Collectors.toCollection(LinkedList::new));
 		Integer[] array = new Integer[] { 1, 4, 78, 5, 10, 7, 8, 9, 100000 };
 		// InsertSort.sort(array, Comp);
-		// MergeSort.sort(array, Comp);
+		MergeSort.sort(array, Comp);
 		//
-		BucketSort.sort(array);
+	\
 	}
 
 }
