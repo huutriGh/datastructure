@@ -1,12 +1,9 @@
 package algorithms.datastructure;
-
 import java.util.Comparator;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import algorithms.datastructure.sorting.BucketSort;
+import algorithms.datastructure.sorting.MergeSort;
 
 @SpringBootApplication
 public class DatastructureApplication implements CommandLineRunner {
@@ -41,7 +38,7 @@ public class DatastructureApplication implements CommandLineRunner {
 		// InsertSort.sort(array, Comp);
 		MergeSort.sort(array, Comp);
 		//
-	\
+
 	}
 
 }
