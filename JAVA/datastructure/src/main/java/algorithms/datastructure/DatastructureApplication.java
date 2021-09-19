@@ -1,16 +1,9 @@
 package algorithms.datastructure;
 
-import java.io.Console;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.Queue;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import algorithms.datastructure.sorting.MergeSort;
-import algorithms.datastructure.sorting.QuickSort;
+
 import algorithms.datastructure.textprocessing.BoyerMore;
 import algorithms.datastructure.textprocessing.BruteForce;
 import algorithms.datastructure.textprocessing.KnuthMorrisPratt;
