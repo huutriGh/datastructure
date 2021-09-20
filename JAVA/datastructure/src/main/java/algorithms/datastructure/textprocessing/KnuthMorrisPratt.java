@@ -12,12 +12,9 @@ public class KnuthMorrisPratt {
         int[] fail = computeFailKMP(pattern);
         int j = 0;
         int k = 0;
-        int count = 0;
+
         while (j < n) {
-            count++;
-            if (count == 11) {
-                System.out.println(count);
-            }
+
             if (text[j] == pattern[k]) {
                 if (k == m - 1) {
                     return j - m + 1;
@@ -34,7 +31,7 @@ public class KnuthMorrisPratt {
         return -1;
     }
 
-    private static int[] computeFailKMP(char[] pattern) {
+    public static int[] computeFailKMP(char[] pattern) {
 
         int m = pattern.length;
         int[] fail = new int[m];

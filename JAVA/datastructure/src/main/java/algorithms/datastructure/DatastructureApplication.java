@@ -50,6 +50,9 @@ public class DatastructureApplication implements CommandLineRunner {
 		int idx = KnuthMorrisPratt.findKMP("abacaabaccabacabaabb".toCharArray(), "abacab".toCharArray());
 		System.out.println(idx);
 
+		int [] fail = KnuthMorrisPratt.computeFailKMP("amalgamation".toCharArray());
+		System.out.println(fail);
+
 	}
 
 }
