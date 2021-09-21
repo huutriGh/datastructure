@@ -15,3 +15,20 @@ that is, except for the root, all internal nodes have one child.
 cons:
     * There is potential space ineffciency in standard Trie: There are potential a lot of nodes that have only one child, 
     and the existence of such nodes is a waste. 
+
+
+========================================================================
+Compressed tries
+
+A Compressed trie is semilar to a standard trie but is ensures that each internal in the trie has at least two children.
+It enforces this rule by compressing chain of single-child node in to individual edges.
+    * Every node of T has at least to children and most d children
+    * T have s leaves
+    * The number of nodes of T is O(s)
+    * A Compressed trie is truly advantangeous only when it is used as an auxiliary index structure over a collection of strings already stored in a primary
+    structure, and is not required to actually store all the character of the strings in the collection.
+========================================================================
+Suffix tries
+
+One of the primary aplications for tries is for the case when the string in th collection S are all the suffixes of a string X.
+Such a trie is called the suffix trie (or position tree) of string X.
