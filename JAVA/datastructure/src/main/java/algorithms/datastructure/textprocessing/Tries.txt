@@ -32,3 +32,7 @@ Suffix tries
 
 One of the primary aplications for tries is for the case when the string in th collection S are all the suffixes of a string X.
 Such a trie is called the suffix trie (or position tree) of string X.
+Using a suffix trie allows us to save space over a standard trie by using several space
+compression techniques, including those used for the compressed trie.
+storing all the suffixes of X explicitly would take O(n2) space. Even so, the suffix trie represents these strings implicitly in O(n) space, as formally stated in the
+following proposition.
