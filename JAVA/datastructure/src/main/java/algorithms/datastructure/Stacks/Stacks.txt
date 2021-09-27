@@ -1,0 +1,5 @@
+Stack are collection of Objects that are inserted and removed according to last-in, first-out (LIFO) principle.
+A user can insert objects into a stack at any time, but may only access or remove the most recently inserted object that remain
+Array-Based stack implement:
+    pros: Simple and efficent.
+    Cons: relies on a fixed-capacity array, which limits the ultimate size of stack
