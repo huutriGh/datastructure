@@ -1,0 +1,2 @@
+Queue is collection of objects that are inserted and removed according to the first-in, first-out (FIFO) principle. That is, elements can be inserted at any time,
+but onle the element that has been in the queue the longest can be next removed.
