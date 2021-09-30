@@ -108,7 +108,8 @@ public class SinglyLinkedList<E> {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        SinglyLinkedList<E> other = (SinglyLinkedList) obj;
+        @SuppressWarnings("unchecked")
+        SinglyLinkedList<E> other = (SinglyLinkedList<E>) obj;
 
         if (size != other.size)
             return false;
@@ -130,6 +131,7 @@ public class SinglyLinkedList<E> {
 
     @Override
     public SinglyLinkedList<E> clone() throws CloneNotSupportedException {
+        @SuppressWarnings("unchecked")
         SinglyLinkedList<E> other = (SinglyLinkedList<E>) super.clone();
         if (size > 0) {
             other.head = new Node<E>(head.getElement(), null);

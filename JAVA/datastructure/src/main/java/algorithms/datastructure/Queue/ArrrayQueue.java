@@ -11,6 +11,7 @@ public class ArrrayQueue<E> implements Queue<E> {
         this(CAPACITY);
     }
 
+    @SuppressWarnings("unchecked")
     public ArrrayQueue(int capacity) {
         data = (E[]) new Object[capacity];
     }
