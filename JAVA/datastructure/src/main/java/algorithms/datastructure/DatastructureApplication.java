@@ -1,5 +1,8 @@
 package algorithms.datastructure;
 
+import java.util.Set;
+import java.util.TreeSet;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -103,22 +106,16 @@ public class DatastructureApplication implements CommandLineRunner {
 		 * sb.append("</center>\n"); sb.append("</body>");
 		 * 
 		 * // System.out.println(isMathched("[(5+x)−(y+z)]"));
-		 * System.out.println(isHTMLMatched(sb.toString()));
+		 * System.out.println(isHTMLMatched(sb.toString())); ArrrayQueue<Integer> queue
+		 * = new ArrrayQueue<>(5); queue.enqueue(1); queue.enqueue(2); queue.enqueue(3);
+		 * queue.enqueue(4); queue.enqueue(5); queue.dequeue(); queue.dequeue();
+		 * queue.dequeue(); queue.enqueue(6); queue.enqueue(7); queue.dequeue();
+		 * queue.dequeue();
 		 */
-
-		ArrrayQueue<Integer> queue = new ArrrayQueue<>(5);
-		queue.enqueue(1);
-		queue.enqueue(2);
-		queue.enqueue(3);
-		queue.enqueue(4);
-		queue.enqueue(5);
-		queue.dequeue();
-		queue.dequeue();
-		queue.dequeue();
-		queue.enqueue(6);
-		queue.enqueue(7);
-		queue.dequeue();
-		queue.dequeue();
+		String x = "abc";
+		String y = "abc";
+		x.concat(y);
+		System.out.println(x);
 	}
 
 }
