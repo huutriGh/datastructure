@@ -112,10 +112,10 @@ public class DatastructureApplication implements CommandLineRunner {
 		 * queue.dequeue(); queue.enqueue(6); queue.enqueue(7); queue.dequeue();
 		 * queue.dequeue();
 		 */
-		String x = "abc";
-		String y = "abc";
-		x.concat(y);
-		System.out.println(x);
+		
+
+
+		System.out.println("");
 	}
 
 }
