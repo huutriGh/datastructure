@@ -1,0 +1,2 @@
+A tree is an abstract data type that stores elements hierarchically. With the exception of the top element, each element in a tree has a parent element and zero or
+more children elements.
