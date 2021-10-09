@@ -1,5 +1,7 @@
 package algorithms.datastructure;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -112,8 +114,6 @@ public class DatastructureApplication implements CommandLineRunner {
 		 * queue.dequeue(); queue.enqueue(6); queue.enqueue(7); queue.dequeue();
 		 * queue.dequeue();
 		 */
-		
-
 
 		System.out.println("");
 	}
