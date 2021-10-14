@@ -18,3 +18,9 @@ Height of position: is Max Depth of position
       - A left child precedes a right child  in order of children of node.
 Binary tree have several interestin properties dealing with relationships between their heights and number of nodes.
  Level d has at most 2^d nodes.
+ size, isEmpty O(1)
+root, parent, isRoot, isInternal, isExternal O(1)
+numChildren(p) O(1)
+children(p) O(cp +1)
+depth(p) O(dp +1)
+height O(n)
