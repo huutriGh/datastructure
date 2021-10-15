@@ -19,7 +19,9 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E> implements B
 
     }
 
-    @Override
+    /**
+     * ∗∗ Returns an iterable collection of the Positions representing p's children.
+     */
     public Iterable<Position<E>> children(Position<E> p) throws IllegalArgumentException {
 
         List<Position<E>> snapshot = new ArrayList<>(2);
