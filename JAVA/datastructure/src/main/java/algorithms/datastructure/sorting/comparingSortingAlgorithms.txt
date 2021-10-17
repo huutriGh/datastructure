@@ -25,3 +25,6 @@
     - The GNU utility replies on a multiway merge-sort variant. Tim-sort is hybrid approach that is essentially a bottom-up merge-sort that takes advantage of
       initial runs in the data while using insertion-sort to build additional runs. The standard sorting algorithm in Python since 2003, 
       default algorithm for sorting arrays of object types, as of Java SE 7.
+
+* Bucket-Sort and Radix-Sort
+    - excellent choice for sorting entries with small integer keys, character string, or d-tuples of keys from discrete range.
