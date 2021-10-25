@@ -1,0 +1,16 @@
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\netcore.exe
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\netcore.deps.json
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\netcore.runtimeconfig.json
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\netcore.runtimeconfig.dev.json
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\netcore.dll
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\ref\netcore.dll
+D:\Tri\React\datastructure\netcore\bin\Debug\net5.0\netcore.pdb
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.csproj.AssemblyReference.cache
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.AssemblyInfoInputs.cache
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.AssemblyInfo.cs
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.csproj.CoreCompileInputs.cache
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.dll
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\ref\netcore.dll
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.pdb
+D:\Tri\React\datastructure\netcore\obj\Debug\net5.0\netcore.genruntimeconfig.cache

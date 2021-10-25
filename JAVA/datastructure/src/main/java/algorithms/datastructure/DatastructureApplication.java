@@ -1,5 +1,6 @@
 package algorithms.datastructure;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -118,10 +119,10 @@ public class DatastructureApplication implements CommandLineRunner {
 
 
 
-		
+	int year=	(int)((((new SimpleDateFormat("dd/MM/yyyy").parse("25/10/2021")).getTime()- (new SimpleDateFormat("dd/MM/yyyy").parse("25/10/2017")).getTime())/(1000*60*60*24) )/365 + 1);
 			 
 		 
-		System.out.println("");
+		System.out.println(year);
 	}
 
 }
