@@ -20,36 +20,74 @@ namespace netcore
             else
             {
 
-                var firstIndexOfMul = p.IndexOf("*");
-
-                while (firstIndexOfMul != -1)
+                int i = 0;
+                int j = 0;
+                if (p.StartsWith(".*"))
                 {
+                    j = 2;
+                }
 
-                    var charBeforeMul = p[firstIndexOfMul - 1];
-                    var charAfterMul = p[firstIndexOfMul + 1];
-                    for (int i = firstIndexOfMul; i < s.Length; i++)
+                do
+                {
+                    if (s[i] == p[j])
                     {
-                        if (s[i] != charBeforeMul)
+                        i++;
+                        j++;
+                    }
+                    else if (s[i] != p[j])
+                    {
+                        if ((p[j] != '*' && p[j] != '.') && (p[j + 1] != '*' && p[j + 1] != '.')) /// loi o day
                         {
-                            if (s[i] != charAfterMul)
+                            return false;
+                        }
+                        else
+                        {
+                            if (p[j] == '.')
                             {
-                                return false;
+                                i++;
+                                j++;
                             }
-                            else if(s[i] == charAfterMul)
+                            else // *
                             {
-                                firstIndexOfMul = p.IndexOf("*", firstIndexOfMul + 1);
-                                if (firstIndexOfMul < 0)
+                                var charBeforeMul = ' ';
+                                var tempIndexofI = i - 1;
+                                if (i - 1 < 0)
                                 {
-                                    break;
+                                    charBeforeMul = p[i];
+                                    tempIndexofI = 0;
+                                    j++;
                                 }
-                                charBeforeMul = p[firstIndexOfMul-1];
-                                charAfterMul = p[firstIndexOfMul + 1];
-                            }
 
+
+                                for (int z = tempIndexofI; z < s.Length; z++)
+                                {
+                                    if (s[z] != charBeforeMul)
+                                    {
+                                        var charAfterMul = p[++j];
+
+                                        if (s[z] != charAfterMul)
+                                        {
+                                            return false;
+                                        }
+
+                                        else
+                                        {
+                                            i = z + 1;
+
+                                            j++;
+                                            break;
+                                        }
+
+                                    }
+                                    i = z + 1;
+
+
+                                }
+                                j++;
+                            }
                         }
                     }
-
-                }
+                } while (i < s.Length || j < p.Length);
 
 
 
