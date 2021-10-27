@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = netcore
-build_property.ProjectDir = d:\Tri\React\datastructure\NETCORE\
+build_property.ProjectDir = D:\Tri\React\datastructure\NETCORE\
