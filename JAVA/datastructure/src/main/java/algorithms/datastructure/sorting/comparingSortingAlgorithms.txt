@@ -1,0 +1,30 @@
+* Insert-Sort
+    - If implemented well, the running time of Insert-Sort is O(n+m), where m is the number of invertions (that is, the number of pairs of elements out of order).
+    - An excellent algorithm for sorting small sequences (say, less than 50 elements) and already almost sorted.
+    - Worst case: O(n^2).
+
+* Heap-Sort
+    - Worst case: O(nlogn).
+    - Natural choise on small and medium sized sequences, when input data can fit into main memory.
+    - A standard Heap-sort does not provide a stable sort, because of the swapping of elements.
+
+* Quick-sort
+    - Worst case: O(n^2)
+    - Expect case: O(nlogn).
+    - dose not provide a stable sort, because of the swapping elements.
+    - For decade was the default choice for a general-purpose, in memory sorting algorithm (qsort in C language, basic sorting utilities on Unix OS, standard
+      algorithm for sorting array of primitive type in java).
+
+* Merge-sort
+
+    - Worst case: O(nlogn)
+    - It is quite difficult to make merge-sort run in-place for arrays, and without that optimization the extra overhead of allocate of temporary array, and copying
+      between the arrays is less attractive than in-place implementation of heap-sort and quick sort for sequences that can fit entirely in a computer's main memory.
+    - Even so, merge-sort is an excellent algorithm for situations where the input is stratified across various levels of the computer's memory hierarchy (e.g., cache
+      main memory, external memory)
+    - The GNU utility replies on a multiway merge-sort variant. Tim-sort is hybrid approach that is essentially a bottom-up merge-sort that takes advantage of
+      initial runs in the data while using insertion-sort to build additional runs. The standard sorting algorithm in Python since 2003, 
+      default algorithm for sorting arrays of object types, as of Java SE 7.
+
+* Bucket-Sort and Radix-Sort
+    - excellent choice for sorting entries with small integer keys, character string, or d-tuples of keys from discrete range.

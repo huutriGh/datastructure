@@ -1,5 +1,5 @@
 package algorithms.datastructure.Tree;
 
-public class Position<T> {
+public interface Position<T> {
 
 }

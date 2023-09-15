@@ -3,3 +3,24 @@ more children elements.
 * The main terminology for tree data structure comes from family trees, with the terms "parent," "child'", "ancestor," and "decendant" being the most common words
    used to describe relationships.
 * Each element in a tree has a parent element and zero or more children elements.
+
+
+Depth of position;
+   Root: 0
+   Others:  1 + Depth of parent of position
+Height of position: is Max Depth of position
+
+============================================================
+* Binary Tree
+   Is an ordered tree with following properties:
+      - Every node has at most two children
+      - Each child node is labeled as being a left child or a right child
+      - A left child precedes a right child  in order of children of node.
+Binary tree have several interestin properties dealing with relationships between their heights and number of nodes.
+ Level d has at most 2^d nodes.
+ size, isEmpty O(1)
+root, parent, isRoot, isInternal, isExternal O(1)
+numChildren(p) O(1)
+children(p) O(cp +1)
+depth(p) O(dp +1)
+height O(n)
