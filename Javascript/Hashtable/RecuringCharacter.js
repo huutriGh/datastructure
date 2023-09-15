@@ -16,11 +16,26 @@ function firstRecurringCharacter(input = []) {
   }
   return undefined;
 }
-function firstRecurringCharacter1(input = []) {
-  let map = {};
+function firstRecurringCharacter3(input = []) {
+  let index = Number.MAX_SAFE_INTEGER;
+  let result = undefined;
   for (let i = 0; i < input.length; i++) {
-    if (!map[input[i]]) {
-      map[input[i]] = 1;
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[i] === input[j]) {
+        if (j < index) {
+          index = j;
+          result = input[j];
+        }
+      }
+    }
+  }
+  return result;
+}
+function firstRecurringCharacter1(input = []) {
+  let recurringObj = {};
+  for (let i = 0; i < input.length; i++) {
+    if (!recurringObj[input[i]]) {
+      recurringObj[input[i]] = 1;
     } else {
       return input[i];
     }
@@ -31,6 +46,4 @@ function firstRecurringCharacter1(input = []) {
 // console.log(firstRecurringCharacter([2, 5, 1, 2, 3, 5, 1, 2, 4]));
 // console.log(firstRecurringCharacter([2, 1, 1, 2, 3, 5, 1, 2, 4]));
 // console.log(firstRecurringCharacter([2, 3, 4, 5]));
-console.log(firstRecurringCharacter1([2, 5, 1, 2, 3, 5, 1, 2, 4]));
-console.log(firstRecurringCharacter1([2, 1, 1, 2, 3, 5, 1, 2, 4]));
-console.log(firstRecurringCharacter1([2, 3, 4, 5]));
+console.log(firstRecurringCharacter1([2, 1, 3, 2]));

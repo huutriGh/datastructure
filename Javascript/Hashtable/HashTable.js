@@ -53,7 +53,7 @@ class HashTable {
 
 const myHashTable = new HashTable(2);
 
-myHashTable.set('grapes', 10000);
+myHashTable.set('apples', 10000);
 myHashTable.set('apples', 54);
 console.log(myHashTable);
 console.log(myHashTable.get('grapes'));

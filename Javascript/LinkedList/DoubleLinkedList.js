@@ -78,6 +78,13 @@ class DoubleLinkedList {
     this.length--;
   }
 
+  removeLast(){
+   
+    this.tail = this.tail.prev;
+    
+
+  }
+
   _traverseToIndex(index) {
     let counter = 0;
     let currentNode = this.head;
@@ -99,6 +106,9 @@ class DoubleLinkedList {
 
 const myDoubleLinkedList = new DoubleLinkedList(10);
 
-myDoubleLinkedList.prepend(5);
-myDoubleLinkedList.insert(1);
+myDoubleLinkedList.append(1);
+myDoubleLinkedList.append(5);
+myDoubleLinkedList.append(16);
+
+myDoubleLinkedList.insert(2,10);
 console.log(myDoubleLinkedList.head.next.prev);

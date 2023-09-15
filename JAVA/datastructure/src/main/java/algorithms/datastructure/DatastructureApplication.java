@@ -1,15 +1,11 @@
 package algorithms.datastructure;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import algorithms.datastructure.Queue.ArrrayQueue;
+import algorithms.datastructure.LinkedList.CircularlyLinkedList;
+import algorithms.datastructure.LinkedList.DoubleLinkedList;
 //import algorithms.datastructure.Stacks.ArrayStack;
 import algorithms.datastructure.Stacks.LinkedStack;
 import algorithms.datastructure.Stacks.Stack;
@@ -114,8 +110,19 @@ public class DatastructureApplication implements CommandLineRunner {
 		 * queue.dequeue(); queue.enqueue(6); queue.enqueue(7); queue.dequeue();
 		 * queue.dequeue();
 		 */
+		// DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+		// list.addFirst(5);
+		// list.addLast(4);
+		// list.addLast(11);
+		// list.removeLast();
+		CircularlyLinkedList<Integer> list = new CircularlyLinkedList<>();
+		list.addFirst(1);
+		list.addFirst(2);
+		list.addFirst(3);
+		// list.addLast(1);
+		// list.addLast(2);
+		// list.addLast(3);
 
-		System.out.println("");
-	}
+}
 
 }

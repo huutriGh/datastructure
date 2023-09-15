@@ -6,7 +6,6 @@
 // Static array: specigfy the number of elemnts your arrry will hold
 //Dynamic array: copy and rebuild an array at a new location, which more memory, if we wanted more memory
 
-
 //Pros: Fast lookup, Fast push/pop, ordered.
 //Cons: slow insert, slow deletes, fixed size if static array
 
@@ -45,15 +44,28 @@ class MyArray {
     delete this.data[this.length - 1];
     this.length--;
   }
+
+  unshift(item) {
+    for (let i = this.length; i > 0; i--) {
+      const element = this.data[i - 1];
+      this.data[i] = element;
+    }
+    this.data[0] = item;
+  }
 }
 
 const newArray = new MyArray();
 
-newArray.push('hi');
-newArray.push('you');
-newArray.push('!');
+newArray.push("hi");
+newArray.push("you");
+newArray.push("!");
+newArray.unshift("first");
 // console.log(newArray);
 // newArray.pop();
+//console.log(newArray);
+newArray.delete(0);
 console.log(newArray);
-newArray.delete(1);
-console.log(newArray);
+
+
+const a = [];
+a.unshift(1);

@@ -71,7 +71,8 @@ class LinkedList {
     if (!this.head.next) {
       return;
     }
-    // 1  10  5   16
+    // 1  2   3
+    // 2  1   3
     this.tail = this.head;
     let first = this.head;
     let second = first.next;
@@ -80,11 +81,43 @@ class LinkedList {
       second.next = first;
       first = second;
       second = temp;
-      
     }
     this.head.next = null;
     this.head = first;
     console.log(this.printlist());
+  }
+  reversev2() {
+    if (!this.head.next) {
+      return;
+    }
+    // null 10  1  5   16
+    let previous = null;
+    let current = this.head;
+    let next;
+    const tail = this.head;
+    while (current !== null) {
+      next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+    }
+
+    this.head = previous;
+    this.tail = tail;
+    console.log(this.printlist());
+  }
+  recursiveReverse(head) {
+    let first;
+
+    if (head == null || head.next == null) {
+      return head;
+    }
+
+    first = this.recursiveReverse(head.next);
+    head.next.next = head;
+    head.next = null;
+    this.head = first;
+    return first;
   }
 
   _traverseToIndex(index) {
@@ -106,11 +139,35 @@ class LinkedList {
     return array;
   }
 }
+// 1 --> 2 --> 3
+const FindMiddle = (head) => {
+  let count = 0;
+  let mid = head;
 
-const myLinkedList = new LinkedList(10);
-myLinkedList.prepend(1);
-myLinkedList.append(5);
-myLinkedList.append(16);
+  while (head != null) {
+    // Update mid, when 'count'
+    // is odd number
+    if (count % 2 == 1) {
+      mid = mid.next;
+    }
 
-myLinkedList.reverse();
+    ++count;
+    head = head.next;
+  }
+
+  // If empty list is provided
+  if (mid != null) {
+    console.log(mid);
+  }
+};
+
+const myLinkedList = new LinkedList(1);
+myLinkedList.append(2);
+myLinkedList.append(3);
+
+FindMiddle(myLinkedList.head);
+
+
+// myLinkedList.recursiveReverse(myLinkedList.head);
+//myLinkedList.reverse();
 //console.log(myLinkedList.printlist());
